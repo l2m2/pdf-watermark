@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# 用法同 watermark.py，自动使用 venv 环境
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+VENV_PYTHON="$SCRIPT_DIR/.venv/bin/python"
+
+if [ ! -f "$VENV_PYTHON" ]; then
+  echo "虚拟环境未找到，正在创建..."
+  python3 -m venv "$SCRIPT_DIR/.venv"
+  "$SCRIPT_DIR/.venv/bin/pip" install -q -r "$SCRIPT_DIR/requirements.txt"
+fi
+
+exec "$VENV_PYTHON" "$SCRIPT_DIR/watermark.py" "$@"
