@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(echo '')",
+      "Bash(echo 'alias wm=\"$HOME/workspace/l2m2/pdf-watermark/wm\"')"
+    ]
+  }
+}

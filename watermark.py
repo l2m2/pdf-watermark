@@ -195,7 +195,7 @@ if __name__ == "__main__":
     )
     parser.add_argument("input", help="输入 PDF 文件")
     parser.add_argument("output", help="输出 PDF 文件")
-    parser.add_argument("--text", default="机密文件", help="水印文字（默认：机密文件）")
+    parser.add_argument("--text", default="Gongwo Internal Doc", help="水印文字（默认：Gongwo Internal Doc）")
     parser.add_argument("--dpi", type=int, default=200, help="渲染分辨率（默认：200）")
     parser.add_argument("--opacity", type=int, default=60, help="透明度 0-255（默认：60）")
     parser.add_argument("--angle", type=int, default=45, help="旋转角度（默认：45）")
